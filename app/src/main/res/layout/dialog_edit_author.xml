@@ -32,11 +32,16 @@
                 android:layout_height="wrap_content"
                 android:text="เลือกอาจารย์" />
 
-            <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                android:id="@+id/spinnerTeacher"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:focusable="true" />
+            <RelativeLayout
+                android:layout_width="345dp"
+                android:layout_height="35dp">
+
+                <!-- Spinner สำหรับเลือกชื่ออาจารย์ -->
+                <Spinner
+                    android:id="@+id/spinnerTeacher"
+                    android:layout_width="345dp"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
 
 
             <!-- Date Picker สำหรับเลือกวันที่ -->
@@ -55,8 +60,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clickable="true"
-                    android:focusable="false"
-                    android:hint="วว/ดด/ปปปป" />
+                    android:focusable="true"
+                    android:hint="วว/ดด/ปป" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <!-- TextInput สำหรับกรอกวัตถุประสงค์ -->
