@@ -88,13 +88,6 @@
                 android:backgroundTint="#ffa000"
                 android:text="ตกลง" />
 
-            <com.google.android.material.bottomnavigation.BottomNavigationView
-                android:id="@+id/bottom_navigation"
-                android:layout_width="match_parent"
-                android:layout_height="56dp"
-                android:layout_alignParentBottom="true"
-                app:menu="@menu/bottom_navigation_menu" />
-
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
 

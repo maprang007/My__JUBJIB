@@ -1,5 +1,6 @@
 package com.example.myjubjib
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
 import android.widget.Button
@@ -26,7 +27,10 @@ class MainActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
                 // หากกรอกทั้งสองช่อง
                 Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show()
-                // ทำการเข้าสู่ระบบหรือส่งข้อมูลไปยัง API
+
+                // เปิดหน้าใหม่ (DialogActivity)
+                val intent = Intent(this, DialogActivity::class.java) // สร้าง Intent เพื่อเปิด DialogActivity
+                startActivity(intent) // เรียกใช้ startActivity เพื่อเปิดหน้าต่างใหม่
             } else {
                 // หากช่องใดช่องหนึ่งว่าง
                 Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show()
