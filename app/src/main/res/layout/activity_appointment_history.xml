@@ -87,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="สถานะ: ได้รับการยืนยัน"
-                    android:textColor="#4CAF50"
+                    android:textColor="#28a745"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
@@ -160,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="สถานะ: ได้รับการยืนยัน"
-                    android:textColor="#4CAF50"
+                    android:textColor="#28a745"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
@@ -232,8 +232,8 @@
                     android:id="@+id/appointmentStatus3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="สถานะ: ได้รับการยืนยัน"
-                    android:textColor="#4CAF50"
+                    android:text="สถานะ: รอการยืนยัน"
+                    android:textColor="#6c757d"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
