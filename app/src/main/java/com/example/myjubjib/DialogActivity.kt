@@ -35,7 +35,7 @@ class DialogActivity : AppCompatActivity() {
             override fun onTextChanged(charSequence: CharSequence?, start: Int, before: Int, count: Int) {
                 val text = charSequence.toString()
                 // ตรวจสอบการกรอกวันที่
-                if (text.length == 2 || text.length == 2) {
+                if (text.length == 2 || text.length == 5) {
                     // เพิ่ม / หลังจาก 2 ตัวแรก และ 2 ตัวถัดไป
                     if (!text.contains("/")) {
                         editDate.setText("$text/")

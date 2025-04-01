@@ -21,7 +21,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="347dp"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -33,16 +33,15 @@
                 android:text="เลือกอาจารย์" />
 
             <RelativeLayout
-                android:layout_width="345dp"
+                android:layout_width="346dp"
                 android:layout_height="35dp">
 
                 <!-- Spinner สำหรับเลือกชื่ออาจารย์ -->
                 <Spinner
                     android:id="@+id/spinnerTeacher"
-                    android:layout_width="345dp"
+                    android:layout_width="365dp"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
-
 
             <!-- Date Picker สำหรับเลือกวันที่ -->
             <TextView
@@ -83,15 +82,57 @@
                     android:inputType="textMultiLine" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <!-- ปุ่มตกลง -->
-            <Button
-                android:id="@+id/btnSubmit"
-                style="@style/Widget.MaterialComponents.Button"
+            <!-- Spinner สำหรับเลือกเวลาที่สามารถจองได้ -->
+            <TextView
+                android:id="@+id/textViewTimeSlot"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="#ffa000"
-                android:text="ตกลง" />
+                android:text="เวลาที่สามารถจองได้"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/buttonTime1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="18:53 - 19:53 (ว่าง)" />
+
+            <Button
+                android:id="@+id/buttonTime2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                android:text="03:00 - 04:00 (ว่าง)" />
+
+            <!-- ปุ่มตกลงและยกเลิก -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/buttonTime2">
+
+                <Button
+                    android:id="@+id/buttonConfirm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#076B66"
+                    android:text="ตกลง"
+                    android:textColor="#FFFFFF" />
+
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#B71C1C"
+                    android:text="ยกเลิก"
+                    android:textColor="#FFFFFF" />
+            </LinearLayout>
 
         </LinearLayout>
     </com.google.android.material.card.MaterialCardView>
