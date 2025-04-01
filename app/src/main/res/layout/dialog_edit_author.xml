@@ -21,7 +21,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="516dp"
             android:orientation="vertical"
             android:padding="16dp">
 
@@ -39,7 +39,7 @@
                 <!-- Spinner สำหรับเลือกชื่ออาจารย์ -->
                 <Spinner
                     android:id="@+id/spinnerTeacher"
-                    android:layout_width="365dp"
+                    android:layout_width="370dp"
                     android:layout_height="wrap_content" />
             </RelativeLayout>
 
@@ -108,7 +108,7 @@
             <!-- ปุ่มตกลงและยกเลิก -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="88dp"
                 android:layout_marginTop="16dp"
                 android:gravity="center"
                 android:orientation="horizontal"
@@ -117,21 +117,23 @@
                 app:layout_constraintTop_toBottomOf="@+id/buttonTime2">
 
                 <Button
-                    android:id="@+id/buttonConfirm"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:backgroundTint="#076B66"
-                    android:text="ตกลง"
-                    android:textColor="#FFFFFF" />
-
-                <Button
                     android:id="@+id/buttonCancel"
-                    android:layout_width="wrap_content"
+                    android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:backgroundTint="#B71C1C"
                     android:text="ยกเลิก"
                     android:textColor="#FFFFFF" />
+
+                <!-- ปุ่ม Submit -->
+                <Button
+                    android:id="@+id/btnSubmit"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="#388E3C"
+                    android:text="ยืนยัน"
+                    android:textColor="#FFFFFF" />
+
+
             </LinearLayout>
 
         </LinearLayout>

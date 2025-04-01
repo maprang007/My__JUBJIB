@@ -1,9 +1,11 @@
 package com.example.myjubjib
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputEditText
@@ -21,8 +23,6 @@ class DialogActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinnerTeacher)
         val adapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, professors)
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-
-        // ตั้งค่า Adapter ให้กับ Spinner
         spinner.adapter = adapter
 
         // เชื่อมโยงกับ TextInputEditText สำหรับกรอกวันที่
@@ -46,5 +46,25 @@ class DialogActivity : AppCompatActivity() {
 
             override fun afterTextChanged(editable: Editable?) {}
         })
+
+        // กำหนดปุ่มตกลง
+        val btnSubmit = findViewById<Button>(R.id.btnSubmit)
+
+        btnSubmit.setOnClickListener {
+            // ดึงข้อมูลจาก Spinner, EditText
+            val professor = spinner.selectedItem.toString() // ชื่ออาจารย์ที่เลือก
+            val date = editDate.text.toString() // วันที่ที่กรอก
+            val purpose = findViewById<TextInputEditText>(R.id.editPurpose).text.toString() // วัตถุประสงค์การจอง
+            val time = "18:53 - 19:53" // เวลาที่เลือก (ตัวอย่าง)
+
+            // ส่งข้อมูลไปยัง AppointmentHistoryActivity
+            val intent = Intent(this, AppointmentHistoryActivity::class.java).apply {
+                putExtra("professor", professor)
+                putExtra("date", date)
+                putExtra("purpose", purpose)
+                putExtra("time", time)
+            }
+            startActivity(intent)
+        }
     }
 }
