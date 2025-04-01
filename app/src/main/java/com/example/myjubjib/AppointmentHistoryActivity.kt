@@ -1,33 +1,24 @@
 package com.example.myjubjib
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myjubjib.databinding.ActivityAppointmentHistoryBinding
 
 class AppointmentHistoryActivity : AppCompatActivity() {
-
-    private lateinit var binding: ActivityAppointmentHistoryBinding
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAppointmentHistoryBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+        setContentView(R.layout.activity_appointment_history)
 
-        // รับข้อมูลจาก Intent
+        // รับค่าจาก Intent
         val professor = intent.getStringExtra("professor")
         val date = intent.getStringExtra("date")
         val purpose = intent.getStringExtra("purpose")
         val time = intent.getStringExtra("time")
 
-        // แสดงข้อมูลใน RecyclerView
-        if (professor != null && date != null && purpose != null && time != null) {
-            val appointment = Appointment(date, professor, time, purpose)
-            val appointments = listOf(appointment)
-
-            val appointmentAdapter = AppointmentAdapter(appointments)
-            binding.recyclerViewAppointments.layoutManager = LinearLayoutManager(this)
-            binding.recyclerViewAppointments.adapter = appointmentAdapter
-        }
+        // ใส่ค่าที่รับมาใน TextView
+        findViewById<TextView>(R.id.appointmentDate1).text = "วันนัดหมาย: $date"
+        findViewById<TextView>(R.id.appointmentDetails1).text = "จุดประสงค์: $purpose"
+        findViewById<TextView>(R.id.appointmentTime1).text = "เวลานัดหมาย: $time"
+        findViewById<TextView>(R.id.appointmentStatus1).text = "อาจารย์ที่จอง: $professor"
     }
 }

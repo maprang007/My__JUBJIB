@@ -63,6 +63,7 @@ class DialogActivity : AppCompatActivity() {
                 putExtra("date", date)
                 putExtra("purpose", purpose)
                 putExtra("time", time)
+
             }
             startActivity(intent)
         }

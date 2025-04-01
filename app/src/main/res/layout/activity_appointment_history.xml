@@ -1,63 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".AppointmentHistoryActivity">
 
-    <!-- แสดงข้อมูลการนัดหมาย -->
-
+    <!-- Title -->
     <TextView
-        android:id="@+id/textViewProfessor"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/historyTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="อาจารย์"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="2dp" />
-
-    <TextView
-        android:id="@+id/textViewDate"
+        android:layout_marginStart="108dp"
+        android:layout_marginTop="24dp"
+        android:text="ประวัติการจองหมายนัด"
+        android:textColor="#076B66"
+        android:textSize="20sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewProfessor"
-        android:layout_width="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Card with Green Header -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appointmentCard1"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="วันที่"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="353dp" />
-
-    <TextView
-        android:id="@+id/textViewPurpose"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/historyTitle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="วัตถุประสงค์"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="228dp" />
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/textViewTime"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewPurpose"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="เวลา"
-        android:textSize="18sp"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="89dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <!-- RecyclerView สำหรับแสดงรายการการนัดหมาย -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerViewAppointments"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewTime"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="-28dp" />
+            <!-- Header bar (Green) -->
+            <TextView
+                android:id="@+id/appointmentDate1"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#076B66"
+                android:textColor="#FFFFFF"
+                android:paddingStart="12dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <!-- Details -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9F9F9"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/appointmentDetails1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="จุดประสงค์:"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentTime1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="เวลานัดหมาย:"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentProfessor1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="อาจารย์ที่จอง:"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+
+                <TextView
+                    android:id="@+id/appointmentStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="สถานะ: ได้รับการยืนยัน"
+                    android:textColor="#4CAF50"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
