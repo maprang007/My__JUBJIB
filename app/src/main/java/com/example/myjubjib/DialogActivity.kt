@@ -17,7 +17,7 @@ class DialogActivity : AppCompatActivity() {
         setContentView(R.layout.dialog_edit_author) // ใช้ layout ของ dialog_edit_author.xml
 
         // กำหนดข้อมูลชื่ออาจารย์ที่จะแสดงใน Spinner
-        val professors = arrayOf("อาจารย์สมชาย", "อาจารย์นิตยา", "อาจารย์พีระ", "อาจารย์มานะ", "อาจารย์ไกรทอง")
+        val professors = arrayOf("อาจารย์วิชัย สมบัติ", "อาจารย์บุญชู จิตนุพงศ์")
 
         // เชื่อมต่อ Spinner กับ ArrayAdapter
         val spinner = findViewById<Spinner>(R.id.spinnerTeacher)
@@ -51,21 +51,9 @@ class DialogActivity : AppCompatActivity() {
         val btnSubmit = findViewById<Button>(R.id.btnSubmit)
 
         btnSubmit.setOnClickListener {
-            // ดึงข้อมูลจาก Spinner, EditText
-            val professor = spinner.selectedItem.toString() // ชื่ออาจารย์ที่เลือก
-            val date = editDate.text.toString() // วันที่ที่กรอก
-            val purpose = findViewById<TextInputEditText>(R.id.editPurpose).text.toString() // วัตถุประสงค์การจอง
-            val time = "18:53 - 19:53" // เวลาที่เลือก (ตัวอย่าง)
-
-            // ส่งข้อมูลไปยัง AppointmentHistoryActivity
-            val intent = Intent(this, AppointmentHistoryActivity::class.java).apply {
-                putExtra("professor", professor)
-                putExtra("date", date)
-                putExtra("purpose", purpose)
-                putExtra("time", time)
-
-            }
-            startActivity(intent)
+            // เปิดหน้า AppointmentHistoryActivity โดยไม่ต้องส่งข้อมูล
+            val intent = Intent(this, AppointmentHistoryActivity::class.java)
+            startActivity(intent) // เปิดหน้า AppointmentHistoryActivity
         }
     }
 }

@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Card with Green Header -->
+    <!-- First Appointment Card -->
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/appointmentCard1"
         android:layout_width="0dp"
@@ -39,18 +39,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Header bar (Green) -->
             <TextView
-                android:id="@+id/appointmentDate1"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:background="#076B66"
+                android:text="วันนัดหมาย: 3 เมษายน 2568"
                 android:textColor="#FFFFFF"
                 android:paddingStart="12dp"
                 android:gravity="center_vertical"
                 android:textSize="16sp" />
 
-            <!-- Details -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,7 +61,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="จุดประสงค์:"
+                    android:text="วัตถุประสงค์: Consultation"
                     android:textColor="#000000"
                     android:textSize="14sp" />
 
@@ -72,7 +70,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="4dp"
-                    android:text="เวลานัดหมาย:"
+                    android:text="เวลานัดหมาย: 16:30 - 17:30 "
                     android:textColor="#000000"
                     android:textSize="14sp" />
 
@@ -80,13 +78,158 @@
                     android:id="@+id/appointmentProfessor1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="อาจารย์ที่จอง:"
+                    android:text="อาจารย์ที่จอง: วิชัย สมบัติ"
                     android:textColor="#000000"
                     android:textSize="14sp" />
 
-
                 <TextView
                     android:id="@+id/appointmentStatus1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="สถานะ: ได้รับการยืนยัน"
+                    android:textColor="#4CAF50"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Second Appointment Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appointmentCard2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/appointmentCard1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#076B66"
+                android:text="วันนัดหมาย: 4 เมษายน 2568"
+                android:textColor="#FFFFFF"
+                android:paddingStart="12dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9F9F9"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/appointmentDetails2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="วัตถุประสงค์: Research"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentTime2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="เวลานัดหมาย: 08:00 - 09:00 "
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentProfessor2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="อาจารย์ที่จอง: วิชัย สมบัติ"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentStatus2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="สถานะ: ได้รับการยืนยัน"
+                    android:textColor="#4CAF50"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Third Appointment Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/appointmentCard3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:layout_constraintTop_toBottomOf="@id/appointmentCard2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#076B66"
+                android:text="วันนัดหมาย: 5 เมษายน 2568"
+                android:textColor="#FFFFFF"
+                android:paddingStart="12dp"
+                android:gravity="center_vertical"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F9F9F9"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/appointmentDetails3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="วัตถุประสงค์: Project"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentTime3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:text="เวลานัดหมาย: 16:30 - 17:30 "
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentProfessor3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="อาจารย์ที่จอง: บุญชู จิตนุพงศ์"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/appointmentStatus3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="สถานะ: ได้รับการยืนยัน"

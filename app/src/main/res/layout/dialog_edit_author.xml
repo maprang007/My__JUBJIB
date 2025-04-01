@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="#076B66"
-                android:text="18:53 - 19:53 (ว่าง)" />
+                android:text="08:00 - 09:00 (ว่าง)" />
 
             <Button
                 android:id="@+id/buttonTime2"
@@ -109,7 +109,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
                 android:backgroundTint="#076B66"
-                android:text="03:00 - 04:00 (ว่าง)" />
+                android:text="16:30 - 17:30 (ว่าง)" />
 
             <!-- ปุ่มตกลงและยกเลิก -->
             <LinearLayout
@@ -141,6 +141,7 @@
                     android:backgroundTint="#388E3C"
                     android:text="ยืนยัน"
                     android:textColor="#FFFFFF" />
+
 
             </LinearLayout>
 

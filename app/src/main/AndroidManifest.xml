@@ -1,14 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" >
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:icon="@mipmap/ic_launcher"
         android:label="MyJUBJIB"
         android:theme="@style/Theme.MyJUBJIB" >
+
+        <!-- เพิ่ม Activity AppointmentHistoryActivity ที่นี่ -->
         <activity
             android:name=".DialogActivity"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -16,10 +18,15 @@
             android:theme="@style/Theme.MyJUBJIB" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- เพิ่ม Activity ของ AppointmentHistoryActivity -->
+        <activity
+            android:name=".AppointmentHistoryActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
